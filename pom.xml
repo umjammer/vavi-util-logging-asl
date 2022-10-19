@@ -4,7 +4,7 @@
 
   <groupId>vavi</groupId>
   <artifactId>vavi-util-logging-asl</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2-SNAPSHOT</version>
 
   <name>Java Logging for Mac</name>
   <scm>

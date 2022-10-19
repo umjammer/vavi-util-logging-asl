@@ -9,7 +9,7 @@
 
 ## Remarkable Points
 
- * you can see log at syslog (using console.app)
+ * you can see your app log using console.app.
 
 ## Install
 
@@ -18,6 +18,11 @@
  * properties
    * create `logging.properties` [sample](src/test/resources/logging.properties)
    * add a system property `-Djava.util.logging.config.file=/yor/location/logging.properties`
+
+## Tech Know
+
+ * exception thrown by the main method is not shown in syslog.
+   you need to catch exceptions in the main method and log it by yourself
 
 ## TODO
 
