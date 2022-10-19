@@ -5,7 +5,7 @@
 
 # vavi-util-logging-asl
 
- jdk14 logging for mac app.
+ redirection jul logging to syslog for mac app.
 
 ## Remarkable Points
 
