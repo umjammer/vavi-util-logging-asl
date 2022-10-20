@@ -4,16 +4,9 @@
  * Programmed by Naohide Sano
  */
 
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.condition.EnabledIfSystemProperty;
 import vavi.util.Debug;
-import vavi.util.logging.rococoa.asl.AslLibrary;
+import vavi.util.logging.jna.asl.AslLibrary;
 
 
 /**
