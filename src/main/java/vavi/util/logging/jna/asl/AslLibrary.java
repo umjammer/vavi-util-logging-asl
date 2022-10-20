@@ -1,4 +1,4 @@
-package vavi.util.logging.rococoa.asl;
+package vavi.util.logging.jna.asl;
 import com.sun.jna.Library;
 import com.sun.jna.Native;
 import com.sun.jna.NativeLibrary;
@@ -207,7 +207,7 @@ public interface AslLibrary extends Library {
 	 * ASL Library SPI - do not call directly<br>
 	 * Original signature : <code>int _asl_lib_log(asl_object_t, uint32_t, asl_object_t, const char*, null)</code><br>
 	 * <i>native declaration : asl.h:310</i><br>
-	 * @deprecated use the safer methods {@link #_asl_lib_log(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, int, vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, java.lang.String, java.lang.Object)} and {@link #_asl_lib_log(com.sun.jna.Pointer, int, com.sun.jna.Pointer, com.sun.jna.Pointer, java.lang.Object)} instead
+	 * @deprecated use the safer methods {@link #_asl_lib_log(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, int, vavi.util.logging.jna.asl.AslLibrary.asl_object_t, java.lang.String, java.lang.Object)} and {@link #_asl_lib_log(com.sun.jna.Pointer, int, com.sun.jna.Pointer, com.sun.jna.Pointer, java.lang.Object)} instead
 	 */
 	@Deprecated 
 	int _asl_lib_log(Pointer client, int eval, Pointer msg, Pointer format, Object... varArgs1);
@@ -220,7 +220,7 @@ public interface AslLibrary extends Library {
 	/**
 	 * Original signature : <code>uint32_t _asl_evaluate_send(asl_object_t, asl_object_t, int)</code><br>
 	 * <i>native declaration : asl.h:311</i><br>
-	 * @deprecated use the safer methods {@link #_asl_evaluate_send(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, int)} and {@link #_asl_evaluate_send(com.sun.jna.Pointer, com.sun.jna.Pointer, int)} instead
+	 * @deprecated use the safer methods {@link #_asl_evaluate_send(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, vavi.util.logging.jna.asl.AslLibrary.asl_object_t, int)} and {@link #_asl_evaluate_send(com.sun.jna.Pointer, com.sun.jna.Pointer, int)} instead
 	 */
 	@Deprecated 
 	int _asl_evaluate_send(Pointer client, Pointer msg, int level);
@@ -335,7 +335,7 @@ public interface AslLibrary extends Library {
 	 * @param obj An ASL object.<br>
 	 * Original signature : <code>void asl_close(asl_object_t)</code><br>
 	 * <i>native declaration : asl.h:381</i><br>
-	 * @deprecated use the safer methods {@link #asl_close(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t)} and {@link #asl_close(com.sun.jna.Pointer)} instead
+	 * @deprecated use the safer methods {@link #asl_close(vavi.util.logging.jna.asl.AslLibrary.asl_object_t)} and {@link #asl_close(com.sun.jna.Pointer)} instead
 	 */
 	@Deprecated 
 	void asl_close(Pointer obj);
@@ -357,7 +357,7 @@ public interface AslLibrary extends Library {
 	 * @return 0 on success, non-zero on failure.<br>
 	 * Original signature : <code>int asl_add_log_file(asl_object_t, int)</code><br>
 	 * <i>native declaration : asl.h:396</i><br>
-	 * @deprecated use the safer methods {@link #asl_add_log_file(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, int)} and {@link #asl_add_log_file(com.sun.jna.Pointer, int)} instead
+	 * @deprecated use the safer methods {@link #asl_add_log_file(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, int)} and {@link #asl_add_log_file(com.sun.jna.Pointer, int)} instead
 	 */
 	@Deprecated 
 	int asl_add_log_file(Pointer client, int descriptor);
@@ -389,7 +389,7 @@ public interface AslLibrary extends Library {
 	 * @return 0 on success, non-zero on failure.<br>
 	 * Original signature : <code>int asl_add_output_file(asl_object_t, int, const char*, const char*, int, int)</code><br>
 	 * <i>native declaration : asl.h:421</i><br>
-	 * @deprecated use the safer methods {@link #asl_add_output_file(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, int, java.lang.String, java.lang.String, int, int)} and {@link #asl_add_output_file(com.sun.jna.Pointer, int, com.sun.jna.Pointer, com.sun.jna.Pointer, int, int)} instead
+	 * @deprecated use the safer methods {@link #asl_add_output_file(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, int, java.lang.String, java.lang.String, int, int)} and {@link #asl_add_output_file(com.sun.jna.Pointer, int, com.sun.jna.Pointer, com.sun.jna.Pointer, int, int)} instead
 	 */
 	@Deprecated 
 	int asl_add_output_file(Pointer client, int fd, Pointer mfmt, Pointer tfmt, int filter, int text_encoding);
@@ -421,7 +421,7 @@ public interface AslLibrary extends Library {
 	 * @return the previous filter value.<br>
 	 * Original signature : <code>int asl_set_output_file_filter(asl_object_t, int, int)</code><br>
 	 * <i>native declaration : asl.h:437</i><br>
-	 * @deprecated use the safer methods {@link #asl_set_output_file_filter(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, int, int)} and {@link #asl_set_output_file_filter(com.sun.jna.Pointer, int, int)} instead
+	 * @deprecated use the safer methods {@link #asl_set_output_file_filter(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, int, int)} and {@link #asl_set_output_file_filter(com.sun.jna.Pointer, int, int)} instead
 	 */
 	@Deprecated 
 	int asl_set_output_file_filter(Pointer client, int fd, int filter);
@@ -445,7 +445,7 @@ public interface AslLibrary extends Library {
 	 * @return 0 on success, non-zero on failure.<br>
 	 * Original signature : <code>int asl_remove_log_file(asl_object_t, int)</code><br>
 	 * <i>native declaration : asl.h:449</i><br>
-	 * @deprecated use the safer methods {@link #asl_remove_log_file(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, int)} and {@link #asl_remove_log_file(com.sun.jna.Pointer, int)} instead
+	 * @deprecated use the safer methods {@link #asl_remove_log_file(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, int)} and {@link #asl_remove_log_file(com.sun.jna.Pointer, int)} instead
 	 */
 	@Deprecated 
 	int asl_remove_log_file(Pointer client, int descriptor);
@@ -475,7 +475,7 @@ public interface AslLibrary extends Library {
 	 * @return the previous filter value.<br>
 	 * Original signature : <code>int asl_set_filter(asl_object_t, int)</code><br>
 	 * <i>native declaration : asl.h:469</i><br>
-	 * @deprecated use the safer methods {@link #asl_set_filter(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, int)} and {@link #asl_set_filter(com.sun.jna.Pointer, int)} instead
+	 * @deprecated use the safer methods {@link #asl_set_filter(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, int)} and {@link #asl_set_filter(com.sun.jna.Pointer, int)} instead
 	 */
 	@Deprecated 
 	int asl_set_filter(Pointer client, int f);
@@ -505,7 +505,7 @@ public interface AslLibrary extends Library {
 	 * or NULL if n is greater than the largest message index.<br>
 	 * Original signature : <code>char* asl_key(asl_object_t, uint32_t)</code><br>
 	 * <i>native declaration : asl.h:481</i><br>
-	 * @deprecated use the safer methods {@link #asl_key(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, int)} and {@link #asl_key(com.sun.jna.Pointer, int)} instead
+	 * @deprecated use the safer methods {@link #asl_key(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, int)} and {@link #asl_key(com.sun.jna.Pointer, int)} instead
 	 */
 	@Deprecated 
 	String asl_key(Pointer msg, int n);
@@ -528,7 +528,7 @@ public interface AslLibrary extends Library {
 	 * @return 0 for success, non-zero for failure.<br>
 	 * Original signature : <code>int asl_fetch_key_val_op(asl_object_t, uint32_t, const char**, const char**, uint32_t*)</code><br>
 	 * <i>native declaration : asl.h:498</i><br>
-	 * @deprecated use the safer methods {@link #asl_fetch_key_val_op(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, int, java.lang.String[], java.lang.String[], java.nio.IntBuffer)} and {@link #asl_fetch_key_val_op(com.sun.jna.Pointer, int, com.sun.jna.ptr.PointerByReference, com.sun.jna.ptr.PointerByReference, com.sun.jna.ptr.IntByReference)} instead
+	 * @deprecated use the safer methods {@link #asl_fetch_key_val_op(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, int, java.lang.String[], java.lang.String[], java.nio.IntBuffer)} and {@link #asl_fetch_key_val_op(com.sun.jna.Pointer, int, com.sun.jna.ptr.PointerByReference, com.sun.jna.ptr.PointerByReference, com.sun.jna.ptr.IntByReference)} instead
 	 */
 	@Deprecated 
 	int asl_fetch_key_val_op(Pointer msg, int n, PointerByReference key, PointerByReference val, IntByReference op);
@@ -567,7 +567,7 @@ public interface AslLibrary extends Library {
 	 * @return 0 for success, non-zero for failure.<br>
 	 * Original signature : <code>int asl_set(asl_object_t, const char*, const char*)</code><br>
 	 * <i>native declaration : asl.h:528</i><br>
-	 * @deprecated use the safer methods {@link #asl_set(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, java.lang.String, java.lang.String)} and {@link #asl_set(com.sun.jna.Pointer, com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
+	 * @deprecated use the safer methods {@link #asl_set(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, java.lang.String, java.lang.String)} and {@link #asl_set(com.sun.jna.Pointer, com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
 	 */
 	@Deprecated 
 	int asl_set(Pointer obj, Pointer key, Pointer value);
@@ -590,7 +590,7 @@ public interface AslLibrary extends Library {
 	 * returns 0 for success, non-zero for failure.<br>
 	 * Original signature : <code>int asl_unset(asl_object_t, const char*)</code><br>
 	 * <i>native declaration : asl.h:539</i><br>
-	 * @deprecated use the safer methods {@link #asl_unset(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, java.lang.String)} and {@link #asl_unset(com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
+	 * @deprecated use the safer methods {@link #asl_unset(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, java.lang.String)} and {@link #asl_unset(com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
 	 */
 	@Deprecated 
 	int asl_unset(Pointer obj, Pointer key);
@@ -610,7 +610,7 @@ public interface AslLibrary extends Library {
 	 * @return the attribute value, or NULL if the object does not contain the key.<br>
 	 * Original signature : <code>char* asl_get(asl_object_t, const char*)</code><br>
 	 * <i>native declaration : asl.h:550</i><br>
-	 * @deprecated use the safer methods {@link #asl_get(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, java.lang.String)} and {@link #asl_get(com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
+	 * @deprecated use the safer methods {@link #asl_get(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, java.lang.String)} and {@link #asl_get(com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
 	 */
 	@Deprecated 
 	String asl_get(Pointer msg, Pointer key);
@@ -647,7 +647,7 @@ public interface AslLibrary extends Library {
 	 *    object will have an operator value of zero.<br>
 	 * Original signature : <code>int asl_log(asl_object_t, asl_object_t, int, const char*, null)</code><br>
 	 * <i>native declaration : asl.h:585</i><br>
-	 * @deprecated use the safer methods {@link #asl_log(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, int, java.lang.String, java.lang.Object)} and {@link #asl_log(com.sun.jna.Pointer, com.sun.jna.Pointer, int, com.sun.jna.Pointer, java.lang.Object)} instead
+	 * @deprecated use the safer methods {@link #asl_log(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, vavi.util.logging.jna.asl.AslLibrary.asl_object_t, int, java.lang.String, java.lang.Object)} and {@link #asl_log(com.sun.jna.Pointer, com.sun.jna.Pointer, int, com.sun.jna.Pointer, java.lang.Object)} instead
 	 */
 	@Deprecated 
 	int asl_log(Pointer client, Pointer msg, int level, Pointer format, Object... varArgs1);
@@ -717,7 +717,7 @@ public interface AslLibrary extends Library {
 	 *    types of input object.<br>
 	 * Original signature : <code>int asl_vlog(asl_object_t, asl_object_t, int, const char*, va_list)</code><br>
 	 * <i>native declaration : asl.h:622</i><br>
-	 * @deprecated use the safer methods {@link #asl_vlog(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, int, java.lang.String, java.lang.Object)} and {@link #asl_vlog(com.sun.jna.Pointer, com.sun.jna.Pointer, int, com.sun.jna.Pointer, java.lang.Object)} instead
+	 * @deprecated use the safer methods {@link #asl_vlog(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, vavi.util.logging.jna.asl.AslLibrary.asl_object_t, int, java.lang.String, java.lang.Object)} and {@link #asl_vlog(com.sun.jna.Pointer, com.sun.jna.Pointer, int, com.sun.jna.Pointer, java.lang.Object)} instead
 	 */
 	@Deprecated 
 	int asl_vlog(Pointer obj, Pointer msg, int level, Pointer format, Object... ap);
@@ -749,7 +749,7 @@ public interface AslLibrary extends Library {
 	 *    types of input object.<br>
 	 * Original signature : <code>int asl_send(asl_object_t, asl_object_t)</code><br>
 	 * <i>native declaration : asl.h:639</i><br>
-	 * @deprecated use the safer methods {@link #asl_send(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t)} and {@link #asl_send(com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
+	 * @deprecated use the safer methods {@link #asl_send(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, vavi.util.logging.jna.asl.AslLibrary.asl_object_t)} and {@link #asl_send(com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
 	 */
 	@Deprecated 
 	int asl_send(Pointer obj, Pointer msg);
@@ -774,7 +774,7 @@ public interface AslLibrary extends Library {
 	 * @param obj An ASL object to free.<br>
 	 * Original signature : <code>void asl_free(asl_object_t)</code><br>
 	 * <i>native declaration : asl.h:649</i><br>
-	 * @deprecated use the safer methods {@link #asl_free(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t)} and {@link #asl_free(com.sun.jna.Pointer)} instead
+	 * @deprecated use the safer methods {@link #asl_free(vavi.util.logging.jna.asl.AslLibrary.asl_object_t)} and {@link #asl_free(com.sun.jna.Pointer)} instead
 	 */
 	@Deprecated 
 	void asl_free(Pointer obj);
@@ -793,7 +793,7 @@ public interface AslLibrary extends Library {
 	 * @return the object.<br>
 	 * Original signature : <code>asl_object_t asl_retain(asl_object_t)</code><br>
 	 * <i>native declaration : asl.h:658</i><br>
-	 * @deprecated use the safer methods {@link #asl_retain(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t)} and {@link #asl_retain(com.sun.jna.Pointer)} instead
+	 * @deprecated use the safer methods {@link #asl_retain(vavi.util.logging.jna.asl.AslLibrary.asl_object_t)} and {@link #asl_retain(com.sun.jna.Pointer)} instead
 	 */
 	@Deprecated 
 	AslLibrary.asl_object_t asl_retain(Pointer obj);
@@ -811,7 +811,7 @@ public interface AslLibrary extends Library {
 	 * @param obj An ASL object to release.<br>
 	 * Original signature : <code>void asl_release(asl_object_t)</code><br>
 	 * <i>native declaration : asl.h:667</i><br>
-	 * @deprecated use the safer methods {@link #asl_release(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t)} and {@link #asl_release(com.sun.jna.Pointer)} instead
+	 * @deprecated use the safer methods {@link #asl_release(vavi.util.logging.jna.asl.AslLibrary.asl_object_t)} and {@link #asl_release(com.sun.jna.Pointer)} instead
 	 */
 	@Deprecated 
 	void asl_release(Pointer obj);
@@ -829,7 +829,7 @@ public interface AslLibrary extends Library {
 	 * @return the object type.<br>
 	 * Original signature : <code>uint32_t asl_get_type(asl_object_t)</code><br>
 	 * <i>native declaration : asl.h:676</i><br>
-	 * @deprecated use the safer methods {@link #asl_get_type(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t)} and {@link #asl_get_type(com.sun.jna.Pointer)} instead
+	 * @deprecated use the safer methods {@link #asl_get_type(vavi.util.logging.jna.asl.AslLibrary.asl_object_t)} and {@link #asl_get_type(com.sun.jna.Pointer)} instead
 	 */
 	@Deprecated 
 	int asl_get_type(Pointer obj);
@@ -852,7 +852,7 @@ public interface AslLibrary extends Library {
 	 * @return 0 for success, non-zero for failure<br>
 	 * Original signature : <code>int asl_set_query(asl_object_t, const char*, const char*, uint32_t)</code><br>
 	 * <i>native declaration : asl.h:693</i><br>
-	 * @deprecated use the safer methods {@link #asl_set_query(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, java.lang.String, java.lang.String, int)} and {@link #asl_set_query(com.sun.jna.Pointer, com.sun.jna.Pointer, com.sun.jna.Pointer, int)} instead
+	 * @deprecated use the safer methods {@link #asl_set_query(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, java.lang.String, java.lang.String, int)} and {@link #asl_set_query(com.sun.jna.Pointer, com.sun.jna.Pointer, com.sun.jna.Pointer, int)} instead
 	 */
 	@Deprecated 
 	int asl_set_query(Pointer msg, Pointer key, Pointer value, int op);
@@ -891,7 +891,7 @@ public interface AslLibrary extends Library {
 	 *    If obj is of type ASL_TYPE_QUERY and query is of type ASL_TYPE_MSG, the routine returns NULL.<br>
 	 * Original signature : <code>asl_object_t asl_search(asl_object_t, asl_object_t)</code><br>
 	 * <i>native declaration : asl.h:725</i><br>
-	 * @deprecated use the safer methods {@link #asl_search(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t)} and {@link #asl_search(com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
+	 * @deprecated use the safer methods {@link #asl_search(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, vavi.util.logging.jna.asl.AslLibrary.asl_object_t)} and {@link #asl_search(com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
 	 */
 	@Deprecated 
 	AslLibrary.asl_object_t asl_search(Pointer obj, Pointer query);
@@ -928,7 +928,7 @@ public interface AslLibrary extends Library {
 	 *    This routine is deprecated in favor of asl_next().<br>
 	 * Original signature : <code>asl_object_t aslresponse_next(asl_object_t)</code><br>
 	 * <i>native declaration : asl.h:738</i><br>
-	 * @deprecated use the safer methods {@link #aslresponse_next(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t)} and {@link #aslresponse_next(com.sun.jna.Pointer)} instead
+	 * @deprecated use the safer methods {@link #aslresponse_next(vavi.util.logging.jna.asl.AslLibrary.asl_object_t)} and {@link #aslresponse_next(com.sun.jna.Pointer)} instead
 	 */
 	@Deprecated 
 	AslLibrary.asl_object_t aslresponse_next(Pointer obj);
@@ -951,7 +951,7 @@ public interface AslLibrary extends Library {
 	 *    This routine is deprecated in favor of asl_release().<br>
 	 * Original signature : <code>void aslresponse_free(asl_object_t)</code><br>
 	 * <i>native declaration : asl.h:750</i><br>
-	 * @deprecated use the safer methods {@link #aslresponse_free(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t)} and {@link #aslresponse_free(com.sun.jna.Pointer)} instead
+	 * @deprecated use the safer methods {@link #aslresponse_free(vavi.util.logging.jna.asl.AslLibrary.asl_object_t)} and {@link #aslresponse_free(com.sun.jna.Pointer)} instead
 	 */
 	@Deprecated 
 	void aslresponse_free(Pointer obj);
@@ -976,7 +976,7 @@ public interface AslLibrary extends Library {
 	 * @param obj_to_add An object of type ASL_TYPE_MSG, ASL_TYPE_QUERY or type ASL_TYPE_LIST.<br>
 	 * Original signature : <code>void asl_append(asl_object_t, asl_object_t)</code><br>
 	 * <i>native declaration : asl.h:765</i><br>
-	 * @deprecated use the safer methods {@link #asl_append(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t)} and {@link #asl_append(com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
+	 * @deprecated use the safer methods {@link #asl_append(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, vavi.util.logging.jna.asl.AslLibrary.asl_object_t)} and {@link #asl_append(com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
 	 */
 	@Deprecated 
 	void asl_append(Pointer obj, Pointer obj_to_add);
@@ -1003,7 +1003,7 @@ public interface AslLibrary extends Library {
 	 * @param obj_to_add An object of type ASL_TYPE_MSG, ASL_TYPE_QUERY or type ASL_TYPE_LIST.<br>
 	 * Original signature : <code>void asl_prepend(asl_object_t, asl_object_t)</code><br>
 	 * <i>native declaration : asl.h:779</i><br>
-	 * @deprecated use the safer methods {@link #asl_prepend(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t)} and {@link #asl_prepend(com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
+	 * @deprecated use the safer methods {@link #asl_prepend(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, vavi.util.logging.jna.asl.AslLibrary.asl_object_t)} and {@link #asl_prepend(com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
 	 */
 	@Deprecated 
 	void asl_prepend(Pointer obj, Pointer obj_to_add);
@@ -1028,7 +1028,7 @@ public interface AslLibrary extends Library {
 	 *    ASL_TYPE_MSG, ASL_TYPE_QUERY, or ASL_TYPE_LIST.<br>
 	 * Original signature : <code>size_t asl_count(asl_object_t)</code><br>
 	 * <i>native declaration : asl.h:791</i><br>
-	 * @deprecated use the safer methods {@link #asl_count(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t)} and {@link #asl_count(com.sun.jna.Pointer)} instead
+	 * @deprecated use the safer methods {@link #asl_count(vavi.util.logging.jna.asl.AslLibrary.asl_object_t)} and {@link #asl_count(com.sun.jna.Pointer)} instead
 	 */
 	@Deprecated 
 	int asl_count(Pointer obj);
@@ -1050,7 +1050,7 @@ public interface AslLibrary extends Library {
 	 *    Returns NULL if the index is out of range or if list is not an object of type ASL_TYPE_LIST.<br>
 	 * Original signature : <code>asl_object_t asl_get_index(asl_object_t, size_t)</code><br>
 	 * <i>native declaration : asl.h:801</i><br>
-	 * @deprecated use the safer methods {@link #asl_get_index(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, int)} and {@link #asl_get_index(com.sun.jna.Pointer, int)} instead
+	 * @deprecated use the safer methods {@link #asl_get_index(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, int)} and {@link #asl_get_index(com.sun.jna.Pointer, int)} instead
 	 */
 	@Deprecated 
 	AslLibrary.asl_object_t asl_get_index(Pointer list, int index);
@@ -1068,7 +1068,7 @@ public interface AslLibrary extends Library {
 	 * @param list An object of type ASL_TYPE_LIST.<br>
 	 * Original signature : <code>void asl_remove_index(asl_object_t, size_t)</code><br>
 	 * <i>native declaration : asl.h:809</i><br>
-	 * @deprecated use the safer methods {@link #asl_remove_index(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, int)} and {@link #asl_remove_index(com.sun.jna.Pointer, int)} instead
+	 * @deprecated use the safer methods {@link #asl_remove_index(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, int)} and {@link #asl_remove_index(com.sun.jna.Pointer, int)} instead
 	 */
 	@Deprecated 
 	void asl_remove_index(Pointer list, int index);
@@ -1101,7 +1101,7 @@ public interface AslLibrary extends Library {
 	 * @return 0 for success, non-zero for failure<br>
 	 * Original signature : <code>int asl_create_auxiliary_file(asl_object_t, const char*, const char*, int*)</code><br>
 	 * <i>native declaration : asl.h:838</i><br>
-	 * @deprecated use the safer methods {@link #asl_create_auxiliary_file(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, java.lang.String, java.lang.String, java.nio.IntBuffer)} and {@link #asl_create_auxiliary_file(com.sun.jna.Pointer, com.sun.jna.Pointer, com.sun.jna.Pointer, com.sun.jna.ptr.IntByReference)} instead
+	 * @deprecated use the safer methods {@link #asl_create_auxiliary_file(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, java.lang.String, java.lang.String, java.nio.IntBuffer)} and {@link #asl_create_auxiliary_file(com.sun.jna.Pointer, com.sun.jna.Pointer, com.sun.jna.Pointer, com.sun.jna.ptr.IntByReference)} instead
 	 */
 	@Deprecated 
 	int asl_create_auxiliary_file(Pointer msg, Pointer title, Pointer uti, IntByReference out_descriptor);
@@ -1147,7 +1147,7 @@ public interface AslLibrary extends Library {
 	 * @return 0 for success, non-zero for failure<br>
 	 * Original signature : <code>int asl_log_auxiliary_location(asl_object_t, const char*, const char*, const char*)</code><br>
 	 * <i>native declaration : asl.h:867</i><br>
-	 * @deprecated use the safer methods {@link #asl_log_auxiliary_location(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, java.lang.String, java.lang.String, java.lang.String)} and {@link #asl_log_auxiliary_location(com.sun.jna.Pointer, com.sun.jna.Pointer, com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
+	 * @deprecated use the safer methods {@link #asl_log_auxiliary_location(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, java.lang.String, java.lang.String, java.lang.String)} and {@link #asl_log_auxiliary_location(com.sun.jna.Pointer, com.sun.jna.Pointer, com.sun.jna.Pointer, com.sun.jna.Pointer)} instead
 	 */
 	@Deprecated 
 	int asl_log_auxiliary_location(Pointer msg, Pointer title, Pointer uti, Pointer url);
@@ -1245,7 +1245,7 @@ public interface AslLibrary extends Library {
 	 * @return 0 for success, non-zero for failure<br>
 	 * Original signature : <code>int asl_log_descriptor(asl_object_t, asl_object_t, int, int, uint32_t)</code><br>
 	 * <i>native declaration : asl.h:943</i><br>
-	 * @deprecated use the safer methods {@link #asl_log_descriptor(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, int, int, int)} and {@link #asl_log_descriptor(com.sun.jna.Pointer, com.sun.jna.Pointer, int, int, int)} instead
+	 * @deprecated use the safer methods {@link #asl_log_descriptor(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, vavi.util.logging.jna.asl.AslLibrary.asl_object_t, int, int, int)} and {@link #asl_log_descriptor(com.sun.jna.Pointer, com.sun.jna.Pointer, int, int, int)} instead
 	 */
 	@Deprecated 
 	int asl_log_descriptor(Pointer asl, Pointer msg, int level, int descriptor, int fd_type);
@@ -1300,7 +1300,7 @@ public interface AslLibrary extends Library {
 	 * @return a character string, or NULL in case of a failure.<br>
 	 * Original signature : <code>char* asl_format(asl_object_t, const char*, const char*, uint32_t)</code><br>
 	 * <i>native declaration : asl.h:970</i><br>
-	 * @deprecated use the safer methods {@link #asl_format(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, java.lang.String, java.lang.String, int)} and {@link #asl_format(com.sun.jna.Pointer, com.sun.jna.Pointer, com.sun.jna.Pointer, int)} instead
+	 * @deprecated use the safer methods {@link #asl_format(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, java.lang.String, java.lang.String, int)} and {@link #asl_format(com.sun.jna.Pointer, com.sun.jna.Pointer, com.sun.jna.Pointer, int)} instead
 	 */
 	@Deprecated 
 	Pointer asl_format(Pointer msg, Pointer msg_fmt, Pointer time_fmt, int text_encoding);
@@ -1397,7 +1397,7 @@ public interface AslLibrary extends Library {
 	 *    Returns NULL when there are no more messages or if obj is not a type that holds messages.<br>
 	 * Original signature : <code>asl_object_t asl_next(asl_object_t)</code><br>
 	 * <i>native declaration : asl.h:1021</i><br>
-	 * @deprecated use the safer methods {@link #asl_next(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t)} and {@link #asl_next(com.sun.jna.Pointer)} instead
+	 * @deprecated use the safer methods {@link #asl_next(vavi.util.logging.jna.asl.AslLibrary.asl_object_t)} and {@link #asl_next(com.sun.jna.Pointer)} instead
 	 */
 	@Deprecated 
 	AslLibrary.asl_object_t asl_next(Pointer obj);
@@ -1427,7 +1427,7 @@ public interface AslLibrary extends Library {
 	 *    Returns NULL when there are no more messages or if obj is not a type that holds messages.<br>
 	 * Original signature : <code>asl_object_t asl_prev(asl_object_t)</code><br>
 	 * <i>native declaration : asl.h:1036</i><br>
-	 * @deprecated use the safer methods {@link #asl_prev(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t)} and {@link #asl_prev(com.sun.jna.Pointer)} instead
+	 * @deprecated use the safer methods {@link #asl_prev(vavi.util.logging.jna.asl.AslLibrary.asl_object_t)} and {@link #asl_prev(com.sun.jna.Pointer)} instead
 	 */
 	@Deprecated 
 	AslLibrary.asl_object_t asl_prev(Pointer obj);
@@ -1452,7 +1452,7 @@ public interface AslLibrary extends Library {
 	 *    and SIZE_MAX to position it at the end.  Other values of position may cause unpredictable behavior.<br>
 	 * Original signature : <code>void asl_reset_iteration(asl_object_t, size_t)</code><br>
 	 * <i>native declaration : asl.h:1047</i><br>
-	 * @deprecated use the safer methods {@link #asl_reset_iteration(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, int)} and {@link #asl_reset_iteration(com.sun.jna.Pointer, int)} instead
+	 * @deprecated use the safer methods {@link #asl_reset_iteration(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, int)} and {@link #asl_reset_iteration(com.sun.jna.Pointer, int)} instead
 	 */
 	@Deprecated 
 	void asl_reset_iteration(Pointer obj, int position);
@@ -1493,7 +1493,7 @@ public interface AslLibrary extends Library {
 	 * @return an ASL object containing messages matching the querylist, or NULL if there are no matches.<br>
 	 * Original signature : <code>asl_object_t asl_match(asl_object_t, asl_object_t, size_t*, size_t, size_t, uint32_t, int32_t)</code><br>
 	 * <i>native declaration : asl.h:1085</i><br>
-	 * @deprecated use the safer methods {@link #asl_match(vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, vavi.util.logging.rococoa.asl.AslLibrary.asl_object_t, intByReference, int, int, int, int)} and {@link #asl_match(com.sun.jna.Pointer, com.sun.jna.Pointer, intByReference, int, int, int, int)} instead
+	 * @deprecated use the safer methods {@link #asl_match(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, vavi.util.logging.jna.asl.AslLibrary.asl_object_t, intByReference, int, int, int, int)} and {@link #asl_match(com.sun.jna.Pointer, com.sun.jna.Pointer, intByReference, int, int, int, int)} instead
 	 */
 	@Deprecated 
 	AslLibrary.asl_object_t asl_match(Pointer data, Pointer querylist, IntByReference last, int start, int count, int duration, int direction);

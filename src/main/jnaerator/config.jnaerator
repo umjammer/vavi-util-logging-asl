@@ -1,6 +1,6 @@
 -I /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
 
--root vavi.util.logging.rococoa
+-root vavi.util.logging.jna
 
 //-parseInOneChunk
 -runtime JNA
@@ -8,7 +8,7 @@
 //-o "$(DIR)/../java" // overwrite versioned files instead of writing to target/generated-sources/java
 
 //-v
-//-choicesOut "$(DIR)/rococoa.choices"
+//-choicesOut "$(DIR)/jna.choices"
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/asl.h
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/syslog.h
