@@ -23,11 +23,18 @@ class Test1 {
 Debug.println("done");
     }
 
+    /**
+     * logging.properties:
+     * <pre>
+     * handlers=vavi.util.logging.asl.AslHandler
+     * </pre>
+     */
     @Test
     void test1() throws Exception {
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 400; i++) {
             Debug.printf("[%d] %s", i, "Hello Vavi " + i);
         }
+        Debug.printf("漢字");
 Debug.println("done");
     }
 }
