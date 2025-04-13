@@ -22,13 +22,11 @@ public class AslHandler extends ConsoleHandler {
      * <p>
      * The {@code ConsoleHandler} is configured based on
      * {@code LogManager} properties (or their default values).
-     *
      */
     public AslHandler() {
-        super();
         setOutputStream(new AslOutputStream());
-System.err.println("class: "+ getClass());
-System.err.println("level: "+ getLevel());
-System.err.println("formatter: "+ getFormatter());
+System.err.println("class: " + getClass());
+System.err.println("level: " + getLevel());
+System.err.println("formatter: " + getFormatter());
     }
 }
