@@ -24,7 +24,7 @@ import vavi.util.logging.jna.asl.AslLibrary;
 public class AslOutputStream extends OutputStream {
 
     /** */
-    private ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    private final ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
     @Override
     public void write(int b) throws IOException {
@@ -34,7 +34,8 @@ public class AslOutputStream extends OutputStream {
     @Override
     public void flush() throws IOException {
         String message = baos.toString();
-        AslLibrary.INSTANCE.asl_log(null, null, AslLibrary.ASL_LEVEL_NOTICE, message);
+        int r = AslLibrary.INSTANCE.asl_log(null, null, AslLibrary.ASL_LEVEL_NOTICE, message);
+        if (r != 0) throw new IOException("code: " + r);
 System.err.print(message);
         baos.reset();
     }
