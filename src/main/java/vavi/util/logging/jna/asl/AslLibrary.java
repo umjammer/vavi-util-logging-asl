@@ -16,7 +16,7 @@ import java.nio.IntBuffer;
  * For help, please visit <a href="http://nativelibs4java.googlecode.com/">NativeLibs4Java</a> , <a href="http://rococoa.dev.java.net/">Rococoa</a>, or <a href="http://jna.dev.java.net/">JNA</a>.
  */
 public interface AslLibrary extends Library {
-	String JNA_LIBRARY_NAME = "AppKit";
+	String JNA_LIBRARY_NAME = "System";
 	NativeLibrary JNA_NATIVE_LIB = NativeLibrary.getInstance(AslLibrary.JNA_LIBRARY_NAME);
 	AslLibrary INSTANCE = Native.load(AslLibrary.JNA_LIBRARY_NAME, AslLibrary.class);
 	/** <i>native declaration : asl.h</i> */

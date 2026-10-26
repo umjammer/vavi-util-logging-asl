@@ -10,6 +10,9 @@
 ### Remarkable Points
 
  * you can see your app log using console.app.
+ * jul levels are mapped to asl levels (SEVERE → ERR, WARNING → WARNING, INFO → NOTICE, CONFIG/FINE → INFO, FINER/FINEST → DEBUG).
+   INFO and DEBUG of asl are hidden by default in console.app.
+ * on non-macOS platforms the handler falls back to the console (`System.err`).
 
 ## Install
 
@@ -31,4 +34,4 @@
 
 ## TODO
 
- * ~~where is the asl library to link?~~ -> `AppKit.framework`
+ * ~~where is the asl library to link?~~ -> `libSystem` (`libsystem_asl`)
