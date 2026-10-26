@@ -1,10 +1,12 @@
 package vavi.util.logging.jna.asl;
 import com.sun.jna.Library;
 import com.sun.jna.Native;
+import com.sun.jna.NativeLong;
 import com.sun.jna.NativeLibrary;
 import com.sun.jna.Pointer;
 import com.sun.jna.PointerType;
 import com.sun.jna.ptr.IntByReference;
+import com.sun.jna.ptr.NativeLongByReference;
 import com.sun.jna.ptr.PointerByReference;
 import java.nio.IntBuffer;
 /**
@@ -1031,7 +1033,7 @@ public interface AslLibrary extends Library {
 	 * @deprecated use the safer methods {@link #asl_count(vavi.util.logging.jna.asl.AslLibrary.asl_object_t)} and {@link #asl_count(com.sun.jna.Pointer)} instead
 	 */
 	@Deprecated 
-	int asl_count(Pointer obj);
+	NativeLong asl_count(Pointer obj);
 	/**
 	 * Get the number of key/value pairs in an object of type ASL_TYPE_MSG or ASL_TYPE_QUERY,<br>
 	 * or the number of components in an object of type ASL_TYPE_LIST.<br>
@@ -1042,7 +1044,7 @@ public interface AslLibrary extends Library {
 	 * Original signature : <code>size_t asl_count(asl_object_t)</code><br>
 	 * <i>native declaration : asl.h:791</i>
 	 */
-	int asl_count(AslLibrary.asl_object_t obj);
+	NativeLong asl_count(AslLibrary.asl_object_t obj);
 	/**
 	 * Retreive a message from an object of type ASL_TYPE_LIST.<br>
 	 * @param obj An asl_object_t of type ASL_TYPE_LIST<br>
@@ -1053,7 +1055,7 @@ public interface AslLibrary extends Library {
 	 * @deprecated use the safer methods {@link #asl_get_index(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, int)} and {@link #asl_get_index(com.sun.jna.Pointer, int)} instead
 	 */
 	@Deprecated 
-	AslLibrary.asl_object_t asl_get_index(Pointer list, int index);
+	AslLibrary.asl_object_t asl_get_index(Pointer list, NativeLong index);
 	/**
 	 * Retreive a message from an object of type ASL_TYPE_LIST.<br>
 	 * @param obj An asl_object_t of type ASL_TYPE_LIST<br>
@@ -1062,7 +1064,7 @@ public interface AslLibrary extends Library {
 	 * Original signature : <code>asl_object_t asl_get_index(asl_object_t, size_t)</code><br>
 	 * <i>native declaration : asl.h:801</i>
 	 */
-	AslLibrary.asl_object_t asl_get_index(AslLibrary.asl_object_t list, int index);
+	AslLibrary.asl_object_t asl_get_index(AslLibrary.asl_object_t list, NativeLong index);
 	/**
 	 * Remove the message at a specified index from an object of type ASL_TYPE_LIST.<br>
 	 * @param list An object of type ASL_TYPE_LIST.<br>
@@ -1071,14 +1073,14 @@ public interface AslLibrary extends Library {
 	 * @deprecated use the safer methods {@link #asl_remove_index(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, int)} and {@link #asl_remove_index(com.sun.jna.Pointer, int)} instead
 	 */
 	@Deprecated 
-	void asl_remove_index(Pointer list, int index);
+	void asl_remove_index(Pointer list, NativeLong index);
 	/**
 	 * Remove the message at a specified index from an object of type ASL_TYPE_LIST.<br>
 	 * @param list An object of type ASL_TYPE_LIST.<br>
 	 * Original signature : <code>void asl_remove_index(asl_object_t, size_t)</code><br>
 	 * <i>native declaration : asl.h:809</i>
 	 */
-	void asl_remove_index(AslLibrary.asl_object_t list, int index);
+	void asl_remove_index(AslLibrary.asl_object_t list, NativeLong index);
 	/**
 	 * Creates an auxiliary file that may be used to save arbitrary data.  The ASL message msg<br>
 	 * will be saved at the time that the auxiliary file is closed with asl_close_auxiliary_file().<br>
@@ -1338,7 +1340,7 @@ public interface AslLibrary extends Library {
 	 * @deprecated use the safer methods {@link #asl_encode_buffer(java.lang.String, int)} and {@link #asl_encode_buffer(com.sun.jna.Pointer, int)} instead
 	 */
 	@Deprecated 
-	Pointer asl_encode_buffer(Pointer buf, int len);
+	Pointer asl_encode_buffer(Pointer buf, NativeLong len);
 	/**
 	 * Encodes a buffer with embedded nul characters into a nul terminated C string.<br>
 	 * The result must be freed by the caller.<br>
@@ -1352,7 +1354,7 @@ public interface AslLibrary extends Library {
 	 * Original signature : <code>char* asl_encode_buffer(const char*, size_t)</code><br>
 	 * <i>native declaration : asl.h:987</i>
 	 */
-	Pointer asl_encode_buffer(String buf, int len);
+	Pointer asl_encode_buffer(String buf, NativeLong len);
 	/**
 	 * Decodes a C string previously created by asl_encode_buffer back into a buffer,<br>
 	 * possibly containing embedded nul characters.  Allocates memory for the buffer<br>
@@ -1369,7 +1371,7 @@ public interface AslLibrary extends Library {
 	 * @deprecated use the safer methods {@link #asl_decode_buffer(java.lang.String, com.sun.jna.ptr.PointerByReference, intByReference)} and {@link #asl_decode_buffer(com.sun.jna.Pointer, com.sun.jna.ptr.PointerByReference, intByReference)} instead
 	 */
 	@Deprecated 
-	int asl_decode_buffer(Pointer in, PointerByReference buf, IntByReference len);
+	int asl_decode_buffer(Pointer in, PointerByReference buf, NativeLongByReference len);
 	/**
 	 * Decodes a C string previously created by asl_encode_buffer back into a buffer,<br>
 	 * possibly containing embedded nul characters.  Allocates memory for the buffer<br>
@@ -1384,7 +1386,7 @@ public interface AslLibrary extends Library {
 	 * Original signature : <code>int asl_decode_buffer(const char*, char**, size_t*)</code><br>
 	 * <i>native declaration : asl.h:1006</i>
 	 */
-	int asl_decode_buffer(String in, PointerByReference buf, IntByReference len);
+	int asl_decode_buffer(String in, PointerByReference buf, NativeLongByReference len);
 	/**
 	 * Iterate forward through messages in an asl_object_t.<br>
 	 * The asl_object_t object maintains an internal position index for the underlying<br>
@@ -1455,7 +1457,7 @@ public interface AslLibrary extends Library {
 	 * @deprecated use the safer methods {@link #asl_reset_iteration(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, int)} and {@link #asl_reset_iteration(com.sun.jna.Pointer, int)} instead
 	 */
 	@Deprecated 
-	void asl_reset_iteration(Pointer obj, int position);
+	void asl_reset_iteration(Pointer obj, NativeLong position);
 	/**
 	 * Reset internal interation index in an asl_object_t.<br>
 	 * @param obj An object of type ASL_TYPE_CLIENT, ASL_TYPE_LIST, ASL_TYPE_STORE, or ASL_TYPE_FILE.<br>
@@ -1464,7 +1466,7 @@ public interface AslLibrary extends Library {
 	 * Original signature : <code>void asl_reset_iteration(asl_object_t, size_t)</code><br>
 	 * <i>native declaration : asl.h:1047</i>
 	 */
-	void asl_reset_iteration(AslLibrary.asl_object_t obj, int position);
+	void asl_reset_iteration(AslLibrary.asl_object_t obj, NativeLong position);
 	/**
 	 * Searches an asl_object_t.<br>
 	 * The search is controlled by a list of queries, and returns a list with matching messages.<br>
@@ -1496,7 +1498,7 @@ public interface AslLibrary extends Library {
 	 * @deprecated use the safer methods {@link #asl_match(vavi.util.logging.jna.asl.AslLibrary.asl_object_t, vavi.util.logging.jna.asl.AslLibrary.asl_object_t, intByReference, int, int, int, int)} and {@link #asl_match(com.sun.jna.Pointer, com.sun.jna.Pointer, intByReference, int, int, int, int)} instead
 	 */
 	@Deprecated 
-	AslLibrary.asl_object_t asl_match(Pointer data, Pointer querylist, IntByReference last, int start, int count, int duration, int direction);
+	AslLibrary.asl_object_t asl_match(Pointer data, Pointer querylist, NativeLongByReference last, NativeLong start, NativeLong count, int duration, int direction);
 	/**
 	 * Searches an asl_object_t.<br>
 	 * The search is controlled by a list of queries, and returns a list with matching messages.<br>
@@ -1526,7 +1528,7 @@ public interface AslLibrary extends Library {
 	 * Original signature : <code>asl_object_t asl_match(asl_object_t, asl_object_t, size_t*, size_t, size_t, uint32_t, int32_t)</code><br>
 	 * <i>native declaration : asl.h:1085</i>
 	 */
-	AslLibrary.asl_object_t asl_match(AslLibrary.asl_object_t data, AslLibrary.asl_object_t querylist, IntByReference last, int start, int count, int duration, int direction);
+	AslLibrary.asl_object_t asl_match(AslLibrary.asl_object_t data, AslLibrary.asl_object_t querylist, NativeLongByReference last, NativeLong start, NativeLong count, int duration, int direction);
 	class asl_object_t extends PointerType {
 		public asl_object_t(Pointer address) {
 			super(address);

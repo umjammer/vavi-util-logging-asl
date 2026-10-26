@@ -1,0 +1,5 @@
+vavi/util/logging/asl/AslHandler.class
+vavi/util/logging/jna/asl/AslLibrary$asl_object_t.class
+vavi/util/logging/jna/Library.class
+vavi/util/logging/jna/asl/AslLibrary.class
+vavi/util/logging/asl/AslOutputStream.class

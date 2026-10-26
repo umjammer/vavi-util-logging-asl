@@ -33,10 +33,14 @@ public class AslOutputStream extends OutputStream {
 
     @Override
     public void flush() throws IOException {
+        if (baos.size() == 0) {
+            return; // StreamHandler also flushes when nothing is written (head, close etc.)
+        }
         String message = baos.toString();
-        int r = AslLibrary.INSTANCE.asl_log(null, null, AslLibrary.ASL_LEVEL_NOTICE, message);
+        baos.reset();
+        // message must not be a format string, '%' in it crashes the native side
+        int r = AslLibrary.INSTANCE.asl_log(null, null, AslLibrary.ASL_LEVEL_NOTICE, "%s", message);
         if (r != 0) throw new IOException("code: " + r);
 System.err.print(message);
-        baos.reset();
     }
 }
